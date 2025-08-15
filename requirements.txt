@@ -1,0 +1,16 @@
+pandas==2.2.3
+numpy==2.2.6
+sentence-transformers==4.1.0
+huggingface_hub
+rdflib
+ollama
+neo4j==5.28.1
+langchain==0.3.25
+streamlit==1.45.1
+langchain-community==0.3.24
+langchain-openai
+neo4j_graphrag
+google-generativeai
+langchain-google-genai
+ragas
+peft

@@ -1,0 +1,10 @@
+{
+        "positive_impact": "positively impacts",
+        "negative_impact": "negatively impacts",
+        "supportive_of": "is supportive of",
+        "increases": "increases the value of",
+        "descreases": "decreases the value of",
+        "related metric": "related metric",
+        "inverse": "inversely proportional to",
+        "direct": "directly proportional to"
+}

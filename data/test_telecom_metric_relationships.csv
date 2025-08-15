@@ -1,0 +1,28 @@
+metric_a,relationship_type,metric_b,reasoning
+Wireless Net Adds New customers,positively impacts,Wireless Net Adds,New customers directly contribute to the overall net adds.
+Wireless Net Adds AAL,positively impacts,Wireless Net Adds,Additional lines by existing customers contribute to the overall net adds.
+Wireless Port Out,increases the value of,Wireless Churn Rate,More port outs lead to higher churn.
+Wireless Net Adds,decreases the value of,Wireless Churn Rate,"More net adds often reflect improved retention, reducing churn rate."
+Number Of Customers with Autopay Discount,decreases the value of,Wireless Churn Rate,"Autopay customers are more stable, reducing churn."
+Number Of Customers with Autopay Discount,decreases the value of,Wireless Port Out,"Autopay users are more loyal, less likely to port out."
+NPS Score,inversely proportional to,Wireless Churn Rate,"High NPS reflects satisfaction, leading to lower churn. Lower NPS score indicates dissatisfaction, leading to higher churn."
+Average Call handling Time - Service,directly proportional to,Wireless Churn Rate,"If average call handling for service related call increases, customer dissatisfaction increases and churn rate increases."
+Wireless Net Adds New customers,positively impacts,ARPA,"New customers contribute to the overall revenue base, impacting ARPA."
+Wireless Net Adds New customers,positively impacts,NPS Score,New customers' experience directly impacts NPS.
+Wireless Net Adds New customers,negatively impacts,Average Call handling Time - Service,Service quality impacts new customer satisfaction and churn.
+Wireless Net Adds AAL,positively impacts,ARPA,"Additional lines increase revenue, impacting ARPA."
+Wireless Net Adds AAL,positively impacts,NPS Score,"AALs indicate customer satisfaction, impacting NPS."
+Wireless Net Adds AAL,negatively impacts,Average Call handling Time - Service,Service quality impacts AALs through customer satisfaction.
+Wireless Port Out,negatively impacts,ARPA,"Port outs reduce revenue, impacting ARPA."
+Wireless Port Out,negatively impacts,NPS Score,"Port outs indicate customer dissatisfaction, impacting NPS."
+Wireless Port Out,positively impacts,Average Call handling Time - Service,Poor service may lead to port outs.
+Wireless Port In,positively impacts,ARPA,"Port ins increase revenue, impacting ARPA."
+Wireless Port In,positively impacts,NPS Score,"Port ins may indicate positive word-of-mouth, impacting NPS."
+Wireless Port In,negatively impacts,Average Call handling Time - Service,Service quality impacts port-in decisions.
+ARPA,positively impacts,NPS Score,High NPS leads to higher ARPU through increased loyalty and willingness to spend.
+ARPA,negatively impacts,Average Call handling Time - Service,Poor service can negatively impact ARPA.
+NPS Score,negatively impacts,Average Call handling Time - Service,"Longer call handling times indicate poor service, negatively impacting NPS."
+Wireless Net Adds,positively impacts,ARPA,"Net adds contribute to the overall revenue base, impacting ARPA."
+Wireless Net Adds,positively impacts,NPS Score,"Net adds reflect customer satisfaction and loyalty, impacting NPS."
+Wireless Net Adds,negatively impacts,Average Call handling Time - Service,"Service quality impacts customer acquisition and retention, affecting net adds."
+Wireless Churn Rate,negatively impacts,ARPA,"Churn reduces revenue, impacting ARPA."

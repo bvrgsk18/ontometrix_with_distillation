@@ -1,0 +1,11 @@
+{
+    "Wireline": [
+        "voice",
+        "data",
+        "video"
+    ],
+    "Wireless": [
+        "prepaid",
+        "postpaid"
+    ]
+}

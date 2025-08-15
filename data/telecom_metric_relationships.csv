@@ -1,0 +1,46 @@
+metric_a,relationship_type,metric_b,reasoning
+Sales Related Call Volume,positively impacts,Wireless Gross Adds,Increased sales calls often lead to more new subscriptions.
+Sales Related Call Volume,positively impacts,Wireless Net Adds,More sales calls can result in a net increase of wireless subscribers.
+Service Related Call Volume,increases the value of,Wireless Churn Rate,"High service call volume indicates service problems, leading to increased churn."
+Service Related Call Volume,positively impacts,Customer Trouble Tickets Count,More service calls often result in more trouble tickets.
+Wireless Net Adds,positively impacts,ARPA,Higher net adds will contribute to higher Average revenue per account.
+Wireless Net Adds,decreases the value of,Wireless Churn Rate,Higher net adds usually mean better customer retention and lower churn.
+Wireless Disconnects,increases the value of,Wireless Churn Rate,More disconnections directly increase the churn rate.
+Wireless Port Out,increases the value of,Wireless Churn Rate,Wireless port outs are a direct cause of churn.
+Number Of Customers with Autopay Discount,decreases the value of,Wireless Churn Rate,Autopay customers tend to be more loyal and less prone to churn.
+Number Of Customers with Autopay Discount,decreases the value of,Wireless Port Out,Autopay users are less likely to switch carriers.
+NPS Score,inversely proportional to,Wireless Churn Rate,"High NPS reflects customer satisfaction and loyalty, resulting in lower churn."
+Average Call handling Time - Service,positively impacts,Wireless Churn Rate,Longer service calls suggest customer dissatisfaction and potential churn.
+Wireless Disconnects with 90 days device change,increases the value of,Wireless Churn Rate,Disconnections after device changes contribute to churn.
+Wireless Disconnects with 30 days plan change,increases the value of,Wireless Churn Rate,Disconnections after plan changes contribute to churn.
+Wireless Disconnects with Offer acceptance 60 days,increases the value of,Wireless Churn Rate,Disconnections shortly after offer acceptance indicate issues.
+Wireless Disconnects with 60 days plan change,increases the value of,Wireless Churn Rate,Disconnections after plan changes contribute to churn.
+Wireless Disconnects with 30 days device change,increases the value of,Wireless Churn Rate,Disconnections after device changes contribute to churn.
+Wireless Disconnects with 60 days device change,increases the value of,Wireless Churn Rate,Disconnections after device changes contribute to churn.
+Wireless Disconnects with Bill Shock,increases the value of,Wireless Churn Rate,Bill shock is a major reason for churn.
+Wireless Disconnects with Promo acceptance 90 days,increases the value of,Wireless Churn Rate,Disconnections after promotions suggest issues.
+Wireless Disconnects with Promo acceptance 30 days,increases the value of,Wireless Churn Rate,Disconnections after promotions suggest issues.
+Wireless Disconnects with 90 days plan change,increases the value of,Wireless Churn Rate,Disconnections after plan changes contribute to churn.
+Wireless Disconnects with Promo acceptance 60 days,increases the value of,Wireless Churn Rate,Disconnections after promotions suggest issues.
+Wireless Disconnects with Offer acceptance 90 days,increases the value of,Wireless Churn Rate,Disconnections shortly after offer acceptance indicate issues.
+Wireless Disconnects with Offer acceptance 30 days,increases the value of,Wireless Churn Rate,Disconnections shortly after offer acceptance indicate issues.
+Customer Trouble Tickets - Discount Related,increases the value of,Wireless Churn Rate,Trouble with discounts can lead to churn.
+Customer Trouble Tickets - Network Coverage,increases the value of,Wireless Churn Rate,Poor network coverage is a major churn driver.
+Customer Trouble Tickets - Call Drop,increases the value of,Wireless Churn Rate,Frequent call drops lead to dissatisfaction and churn.
+Customer Trouble Tickets - Slow Net Speed,increases the value of,Wireless Churn Rate,Slow internet speed causes frustration and churn.
+Number Of Customers with Late Fee Waiver,decreases the value of,Wireless Churn Rate,High late fee waivers suggest financial issues leading to churn.
+Customer Trouble Tickets Count,increases the value of,Wireless Churn Rate,High trouble ticket volume indicates problems causing churn.
+QES Score,inversely proportional to,Wireless Churn Rate,"Low QES indicates poor service quality, increasing churn."
+Average Call handling time - Sales,negatively impacts,Sales Related Call Volume,Longer sales calls may reduce the number of calls handled.
+Wireless Net Adds New customers,related metric,Wireless Net Adds,New customers are a component of overall net adds.
+Wireless Net Adds AAL,related metric,Wireless Net Adds,AAL is a part of overall wireless net adds.
+Wireless Gross Adds,related metric,Wireless Net Adds,Gross adds are part of the calculation for net adds.
+Wireless Disconnects,negatively impacts,Wireless Net Adds,Disconnections reduce the net adds.
+Wireless Port In,positively impacts,Wireless Net Adds,Port-ins contribute positively to net adds.
+Number of Customer Interactions - Portal,related metric,Number of Customer Interactions,Portal interactions are a subset of all customer interactions.
+Number of Customer Interactions - Store,related metric,Number of Customer Interactions,Store interactions are a subset of all customer interactions.
+Number of Customer Interactions - App,related metric,Number of Customer Interactions,App interactions are a subset of all customer interactions.
+Number of Customer Interactions - Call Centers,related metric,Number of Customer Interactions,Call center interactions are a subset of all customer interactions.
+Wireline Net Adds,related metric,Wireline Gross Adds,Wireline gross adds contribute to net adds.
+Wireline Disconnects,negatively impacts,Wireline Net Adds,Wireline disconnections reduce net adds.
+QES Score,positively impacts,NPS Score,QES score contributes to NPS score which reflect overall customer satisfaction.

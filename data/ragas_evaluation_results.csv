@@ -1,0 +1,447 @@
+user_input,retrieved_contexts,response,reference,faithfulness,answer_relevancy,context_recall,context_precision
+"
+    You are a Telecom Business Analyst. Identify relationships among these KPIs. For each KPI, its desired direction (high or low value better) and a brief description are provided to help you understand its context and impact.
+    metrics can have multiple relationships with other metrics.
+    Detect most suitable relationships.
+    try to define relationships all for metrics.
+    In general Sales related call volume will help to increase gross adds.
+    In general Service related call volume , trouble tickets will positively impact wirless disconnects and increases churn rate and decreases NPS score and qes score
+    Net adds will increase ARPU.
+    For metrics having direction low value is better then use relation ships either ""increases the value of"" or ""decreases the value of"" (e.g., ""Wireless Disconnects, increases the value of, Wireless Churn Rate"", ""Wireless Net Adds, decreases the value of, Wireless Churn Rate"").
+    
+    There are groups of metrics, e.g., ""Wireless Net Adds*"", ""Wireless Disconnects*"", etc. We need to include an additional relationship as ""related metrics"" if not detected by you.
+    For example, the relationships below are DIRECT and ALLOWED:
+    1) Wireless Net Adds,decreases the value of,Wireless Churn Rate,""More net adds often reflect improved retention, reducing churn rate.""
+    2) Wireless Port Out,increases the value of,Wireless Churn Rate,""More port outs lead to higher churn.""
+    3) Number Of Customers with Autopay Discount,decreases the value of,Wireless Churn Rate,""Autopay customers are more stable, reducing churn.""
+    4) Number Of Customers with Autopay Discount,decreases the value of,Wireless Port Out,""Autopay users are more loyal, less likely to port out.""
+    5) NPS Score,inversely proportional to,Wireless Churn Rate,""High NPS reflects satisfaction, leading to lower churn. Lower NPS score indicates dissatisfaction, leading to higher churn.""
+    6) Average Call handling Time - Service,directly proportional to,Wireless Churn Rate,""If average call handlgling for service related call increases , customer dissatifcation increases and churn rate increases.""
+    For example, the relationships below are NOT ALLOWED (indirect or incorrect causality):
+    1) ARPU,increases the value of,Wireless Net Adds,""Higher ARPU can lead to increased investment in acquiring new wireless subscribers, thus increasing net adds.""
+    2) Wireless Churn Rate,negatively impacts,Wireless Net Adds,Higher churn rate results in a decrease in the net adds of wireless subscribers.
+    3) NPS Score,increases the value of,Wireless Net Adds,""Higher NPS scores indicate satisfied customers who are more likely to recommend the service, leading to potential growth in net adds.""
+
+The examples below are completely wrong (e.g., how come new customers increase churn rate?):
+    1) Wireless Net Adds - New customers,increases the value of,Wireless Churn Rate,Higher net adds of new customers may indicate better retention and lower churn rate.
+    2) Wireless Net Adds - Add a Line (AAL),increases the value of,Wireless Churn Rate,More AALs by existing customers may indicate satisfaction and lower likelihood of churn.
+
+If KPIs are clearly part of the same family (e.g., share a common prefix like ""Wireless Net Adds"", ""Wireless Disconnects""), also link them as ""related metrics"" if no direct relationship is detected.
+Metrics with Details:
+- Wireless Net Adds New customers (Direction: High value is better, Description: Net increase in wireless customers who are entirely new to the service.)
+- Wireless Port Out (Direction: Low value is better, Description: Number of wireless customers who transferred their phone number to another carrier.)
+- Wireless Net Adds AAL (Direction: High value is better, Description: Net increase in wireless lines by existing customers adding new lines to their accounts.)
+- ARPA (Direction: High value is better, Description: Average revenue generated per wireless user over a specific period.)
+- Wireless Port In (Direction: High value is better, Description: Number of new wireless customers who transferred their existing phone number from another carrier.)
+- Average Call handling Time - Service (Direction: Low value is better, Description: Average duration of calls handled by customer service agents related to service issues.)
+- NPS Score (Direction: High value is better, Description: Net Promoter Score, measuring customer loyalty and willingness to recommend the service.)
+- Wireless Net Adds (Direction: High value is better, Description: The net change in wireless subscribers, calculated as gross adds minus disconnects.)
+- Wireless Churn Rate (Direction: Low value is better, Description: The percentage of wireless subscribers who cancelled or did not renew their subscriptions.)
+- Number Of Customers with Autopay Discount (Direction: High value is better, Description: Count of customers who are enrolled in autopay and receive a discount.)
+
+
+Allowed relationship types:
+- positively impacts
+- negatively impacts
+- is supportive of
+- increases the value of
+- decreases the value of
+- related metric
+- inversely proportional to
+- directly proportional to
+
+Output format:
+[
+  {
+    ""metric_a"": ""..."",
+    ""relationship_type"": ""..."",
+    ""metric_b"": ""..."",
+    ""reasoning"": ""...""
+  }
+]","['- Wireless Net Adds New customers (Direction: High value is better, Description: Net increase in wireless customers who are entirely new to the service.)\n- Wireless Port Out (Direction: Low value is better, Description: Number of wireless customers who transferred their phone number to another carrier.)\n- Wireless Net Adds AAL (Direction: High value is better, Description: Net increase in wireless lines by existing customers adding new lines to their accounts.)\n- ARPA (Direction: High value is better, Description: Average revenue generated per wireless user over a specific period.)\n- Wireless Port In (Direction: High value is better, Description: Number of new wireless customers who transferred their existing phone number from another carrier.)\n- Average Call handling Time - Service (Direction: Low value is better, Description: Average duration of calls handled by customer service agents related to service issues.)\n- NPS Score (Direction: High value is better, Description: Net Promoter Score, measuring customer loyalty and willingness to recommend the service.)\n- Wireless Net Adds (Direction: High value is better, Description: The net change in wireless subscribers, calculated as gross adds minus disconnects.)\n- Wireless Churn Rate (Direction: Low value is better, Description: The percentage of wireless subscribers who cancelled or did not renew their subscriptions.)\n- Number Of Customers with Autopay Discount (Direction: High value is better, Description: Count of customers who are enrolled in autopay and receive a discount.)\n']","[
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Wireless Net Adds"",
+    ""reasoning"": ""New customers directly contribute to the overall net adds."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""Wireless Net Adds"",
+    ""reasoning"": ""Additional lines by existing customers contribute to the overall net adds."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""Wireless Churn Rate"",
+    ""reasoning"": ""More port outs lead to higher churn."",
+    ""relationship_type"": ""increases the value of""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Wireless Churn Rate"",
+    ""reasoning"": ""More net adds often reflect improved retention, reducing churn rate."",
+    ""relationship_type"": ""decreases the value of""
+  },
+  {
+    ""metric_a"": ""Number Of Customers with Autopay Discount"",
+    ""metric_b"": ""Wireless Churn Rate"",
+    ""reasoning"": ""Autopay customers are more stable, reducing churn."",
+    ""relationship_type"": ""decreases the value of""
+  },
+  {
+    ""metric_a"": ""Number Of Customers with Autopay Discount"",
+    ""metric_b"": ""Wireless Port Out"",
+    ""reasoning"": ""Autopay users are more loyal, less likely to port out."",
+    ""relationship_type"": ""decreases the value of""
+  },
+  {
+    ""metric_a"": ""NPS Score"",
+    ""metric_b"": ""Wireless Churn Rate"",
+    ""reasoning"": ""High NPS reflects satisfaction, leading to lower churn. Lower NPS score indicates dissatisfaction, leading to higher churn."",
+    ""relationship_type"": ""inversely proportional to""
+  },
+  {
+    ""metric_a"": ""Average Call handling Time - Service"",
+    ""metric_b"": ""Wireless Churn Rate"",
+    ""reasoning"": ""If average call handling for service related call increases, customer dissatisfaction increases and churn rate increases."",
+    ""relationship_type"": ""directly proportional to""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Wireless Net Adds AAL"",
+    ""reasoning"": ""These metrics are related because they both contribute to overall wireless net adds."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Wireless Port Out"",
+    ""reasoning"": ""These metrics are related because they both impact overall wireless customer base."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Wireless Port In"",
+    ""reasoning"": ""These metrics are related as they both represent changes in the number of wireless customers."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""New customers contribute to the overall revenue base, impacting ARPA."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""New customers' experience directly impacts NPS."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Service quality impacts new customer satisfaction and churn."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""New customers may eventually enroll in autopay."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""Wireless Port Out"",
+    ""reasoning"": ""These metrics are related because they both impact overall wireless customer base."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""Wireless Port In"",
+    ""reasoning"": ""These metrics are related as they both represent changes in the number of wireless lines."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""Additional lines increase revenue, impacting ARPA."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""AALs indicate customer satisfaction, impacting NPS."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Service quality impacts AALs through customer satisfaction."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Existing customers with AALs may enroll in autopay."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""Wireless Port In"",
+    ""reasoning"": ""These metrics are related as they represent opposite flows of customers."",
+    ""relationship_type"": ""inversely proportional to""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""Port outs reduce revenue, impacting ARPA."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""Port outs indicate customer dissatisfaction, impacting NPS."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Poor service may lead to port outs."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port Out"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Customers leaving are less likely to be in autopay."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port In"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""Port ins increase revenue, impacting ARPA."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port In"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""Port ins may indicate positive word-of-mouth, impacting NPS."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port In"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Service quality impacts port-in decisions."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Port In"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""New customers may eventually enroll in autopay."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""ARPA"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""High NPS leads to higher ARPU through increased loyalty and willingness to spend."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""ARPA"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Poor service can negatively impact ARPA."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""ARPA"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Autopay discounts may slightly reduce ARPA, but increase customer retention."",
+    ""relationship_type"": ""is supportive of""
+  },
+  {
+    ""metric_a"": ""NPS Score"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Longer call handling times indicate poor service, negatively impacting NPS."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""NPS Score"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Autopay convenience may positively impact NPS."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Wireless Net Adds New customers"",
+    ""reasoning"": ""These metrics are related because they both contribute to overall wireless net adds."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Wireless Net Adds AAL"",
+    ""reasoning"": ""These metrics are related because they both contribute to overall wireless net adds."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Wireless Port Out"",
+    ""reasoning"": ""These metrics are related because they both impact overall wireless customer base."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Wireless Port In"",
+    ""reasoning"": ""These metrics are related as they both represent changes in the number of wireless customers."",
+    ""relationship_type"": ""related metric""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""Net adds contribute to the overall revenue base, impacting ARPA."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""NPS Score"",
+    ""reasoning"": ""Net adds reflect customer satisfaction and loyalty, impacting NPS."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Average Call handling Time - Service"",
+    ""reasoning"": ""Service quality impacts customer acquisition and retention, affecting net adds."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Net adds may eventually lead to more customers enrolling in autopay."",
+    ""relationship_type"": ""positively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Churn Rate"",
+    ""metric_b"": ""ARPA"",
+    ""reasoning"": ""Churn reduces revenue, impacting ARPA."",
+    ""relationship_type"": ""negatively impacts""
+  },
+  {
+    ""metric_a"": ""Wireless Churn Rate"",
+    ""metric_b"": ""Number Of Customers with Autopay Discount"",
+    ""reasoning"": ""Lower churn rate is associated with higher number of customers with autopay discount."",
+    ""relationship_type"": ""negatively impacts""
+  }
+]","[
+  {
+    ""metric_a"": ""arpa"",
+    ""relationship_type"": ""negatively impacts"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""higher arpa often reflects customer satisfaction and loyalty, thus reducing churn rate.""
+  },
+  {
+    ""metric_a"": ""average call handling time - service"",
+    ""relationship_type"": ""directly proportional to"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""if average call handlgling for service related call increases , customer dissatifcation increases and churn rate increases.""
+  },
+  {
+    ""metric_a"": ""average call handling time - service"",
+    ""relationship_type"": ""negatively impacts"",
+    ""metric_b"": ""nps score"",
+    ""reasoning"": ""longer call handling times may lead to lower customer satisfaction, thus decreasing nps score.""
+  },
+  {
+    ""metric_a"": ""average call handling time - service"",
+    ""relationship_type"": ""positively impacts"",
+    ""metric_b"": ""wireless port out"",
+    ""reasoning"": ""poor service leading to longer call handling times might increase customer churn and port-outs.""
+  },
+  {
+    ""metric_a"": ""nps score"",
+    ""relationship_type"": ""inversely proportional to"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""high nps reflects satisfaction, leading to lower churn. lower nps score indicates dissatisfaction, leading to higher churn.""
+  },
+  {
+    ""metric_a"": ""nps score"",
+    ""relationship_type"": ""positively impacts"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""higher nps scores indicate satisfied customers who are more likely to recommend the service, leading to potential growth in net adds.""
+  },
+  {
+    ""metric_a"": ""number of customers with autopay discount"",
+    ""relationship_type"": ""decreases the value of"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""customers enrolled in autopay with a discount are less likely to cancel or not renew their subscriptions, reducing the churn rate.""
+  },
+  {
+    ""metric_a"": ""number of customers with autopay discount"",
+    ""relationship_type"": ""decreases the value of"",
+    ""metric_b"": ""wireless port out"",
+    ""reasoning"": ""autopay users are more loyal, less likely to port out.""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""relationship_type"": ""positively impacts"",
+    ""metric_b"": ""arpa"",
+    ""reasoning"": ""when existing customers add more lines (aal), the average revenue per account (arpa) increases as more services are being used.""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""relationship_type"": ""positively impacts"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""more lines added by existing customers increase the total net adds.""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds AAL"",
+    ""relationship_type"": ""related metric"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""both metrics are related to the net increase in wireless customers.""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""relationship_type"": ""related metric"",
+    ""metric_b"": ""Wireless Net Adds AAL"",
+    ""reasoning"": ""both are components of overall wireless net adds.""
+  },
+  {
+    ""metric_a"": ""Wireless Net Adds New customers"",
+    ""relationship_type"": ""related metric"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""both metrics are related to the net increase in wireless customers.""
+  },
+  {
+    ""metric_a"": ""wireless net adds"",
+    ""relationship_type"": ""decreases the value of"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""more net adds often reflect improved retention, reducing churn rate.""
+  },
+  {
+    ""metric_a"": ""wireless net adds"",
+    ""relationship_type"": ""positively impacts"",
+    ""metric_b"": ""arpa"",
+    ""reasoning"": ""net adds increase the user base, thus potentially increasing average revenue per account arpa.""
+  },
+  {
+    ""metric_a"": ""wireless port in"",
+    ""relationship_type"": ""increases the value of"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""port-ins directly contribute to net adds.""
+  },
+  {
+    ""metric_a"": ""wireless port out"",
+    ""relationship_type"": ""decreases the value of"",
+    ""metric_b"": ""wireless net adds"",
+    ""reasoning"": ""port-outs reduce net adds.""
+  },
+  {
+    ""metric_a"": ""wireless port out"",
+    ""relationship_type"": ""increases the value of"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""when more customers transfer their phone number to another carrier (port out), the churn rate increases as more subscribers are leaving.""
+  },
+  {
+    ""metric_a"": ""wireless port out"",
+    ""relationship_type"": ""related metric"",
+    ""metric_b"": ""wireless churn rate"",
+    ""reasoning"": ""both metrics are related to customer retention and churn.""
+  }
+]",0.6444444444444445,0.8061156828947961,0.2631578947368421,0.9999999999

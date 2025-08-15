@@ -1,0 +1,486 @@
+{
+    "Wireline Gross Adds": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            5000,
+            10000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireline",
+        "description": "Total number of new wireline customers or subscribers added during a period."
+    },
+    "Wireless Gross Adds": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            12000,
+            30000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of new wireless customers or subscribers added during a period."
+    },
+    "Wireline Net Adds": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            3000,
+            8000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireline",
+        "description": "The net change in wireline subscribers, calculated as gross adds minus disconnects."
+    },
+    "Wireless Net Adds": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            7000,
+            15000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "The net change in wireless subscribers, calculated as gross adds minus disconnects."
+    },
+    "Wireline Disconnects": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            1100,
+            2500
+        ],
+        "rollup": "sum",
+        "product_name": "Wireline",
+        "description": "Total number of wireline customers who terminated their service during a period."
+    },
+    "Wireless Disconnects": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            5000,
+            35000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of wireless customers who terminated their service during a period."
+    },
+    "Wireline Churn Rate": {
+        "direction": "Low value is better",
+        "datatype": "float",
+        "range": [
+            0.60,
+            0.90
+        ],
+        "rollup": "mean",
+        "product_name": "Wireline",
+        "description": "The percentage of wireline subscribers who cancelled or did not renew their subscriptions."
+    },
+    "Wireless Churn Rate": {
+        "direction": "Low value is better",
+        "datatype": "float",
+        "range": [
+            0.83,
+            1.15
+        ],
+        "rollup": "mean",
+        "product_name": "Wireless",
+        "description": "The percentage of wireless subscribers who cancelled or did not renew their subscriptions."
+    },
+    "NPS Score": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            35,
+            58
+        ],
+        "rollup": "mean",
+        "product_name": "Wireless",
+        "description": "Net Promoter Score, measuring customer loyalty and willingness to recommend the service."
+    },
+    "QES Score": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            55,
+            65
+        ],
+        "rollup": "mean",
+        "product_name": "Wireless",
+        "description": "Quality of Experience Score, reflecting overall customer satisfaction with service quality."
+    },
+    "Service Related Call Volume": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            1000,
+            10000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer calls related to service issues or inquiries."
+    },
+    "Sales Related Call Volume": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            500,
+            5000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer calls related to sales inquiries, new subscriptions, or upgrades."
+    },
+    "ARPA": {
+        "direction": "High value is better",
+        "datatype": "float",
+        "range": [
+            30.0,
+            75.0
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Average revenue generated per wireless user over a specific period."
+    },
+    "Wireless Disconnects with 30 days device change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            800,
+            6000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 30 days of changing their device."
+    },
+    "Wireless Disconnects with 60 days device change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            300,
+            4000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 60 days of changing their device."
+    },
+    "Wireless Disconnects with 90 days device change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            100,
+            2650
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 90 days of changing their device."
+    },
+    "Wireless Disconnects with 30 days plan change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            700,
+            2700
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 30 days of changing their plan."
+    },
+    "Wireless Disconnects with 60 days plan change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            400,
+            1800
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 60 days of changing their plan."
+    },
+    "Wireless Disconnects with 90 days plan change": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            200,
+            1000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 90 days of changing their plan."
+    },
+    "Wireless Disconnects with Bill Shock": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            600,
+            4500
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected due to an unexpectedly high bill."
+    },
+    "Wireless Port In": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            900,
+            3000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of new wireless customers who transferred their existing phone number from another carrier."
+    },
+    "Wireless Port Out": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            550,
+            5000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who transferred their phone number to another carrier."
+    },
+    "Wireless Disconnects with Promo acceptance 30 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            1200,
+            6000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 30 days of accepting a promotional offer."
+    },
+    "Wireless Disconnects with Promo acceptance 60 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            850,
+            9000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 60 days of accepting a promotional offer."
+    },
+    "Wireless Disconnects with Promo acceptance 90 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            700,
+            6000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 90 days of accepting a promotional offer."
+    },
+    "Wireless Disconnects with Offer acceptance 30 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            980,
+            3890
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 30 days of accepting a specific offer."
+    },
+    "Wireless Disconnects with Offer acceptance 60 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            700,
+            3000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 60 days of accepting a specific offer."
+    },
+    "Wireless Disconnects with Offer acceptance 90 days": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            500,
+            6000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of wireless customers who disconnected within 90 days of accepting a specific offer."
+    },
+    "Wireless Net Adds AAL": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            2800,
+            15000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Net increase in wireless lines by existing customers adding new lines to their accounts."
+    },
+    "Wireless Net Adds New customers": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            1500,
+            5000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Net increase in wireless customers who are entirely new to the service."
+    },
+    "Average Call handling Time - Service": {
+        "direction": "Low value is better",
+        "datatype": "float",
+        "range": [
+            2.0,
+            10.0
+        ],
+        "rollup": "mean",
+        "product_name": "Wireless",
+        "description": "Average duration of calls handled by customer service agents related to service issues."
+    },
+    "Average Call handling time - Sales": {
+        "direction": "Low value is better",
+        "datatype": "float",
+        "range": [
+            5.0,
+            18.0
+        ],
+        "rollup": "mean",
+        "product_name": "Wireless",
+        "description": "Average duration of calls handled by customer service agents related to sales."
+    },
+    "Number of Customer Interactions - App": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            1000,
+            90000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer interactions via the mobile application."
+    },
+    "Number of Customer Interactions - Portal": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            1000,
+            100000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer interactions via the online customer portal."
+    },
+    "Number of Customer Interactions - Call Centers": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            1000,
+            5000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer interactions handled by call centers."
+    },
+    "Number of Customer Interactions - Store": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            1000,
+            6000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total number of customer interactions occurring in physical stores."
+    },
+    "Customer Trouble Tickets Count": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            1500,
+            3500
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Total count of customer-reported issues or problems."
+    },
+    "Customer Trouble Tickets - Network Coverage": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            100,
+            1000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of customer trouble tickets specifically related to network coverage issues."
+    },
+    "Customer Trouble Tickets - Call Drop": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            50,
+            800
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of customer trouble tickets specifically related to dropped calls."
+    },
+    "Customer Trouble Tickets - Discount Related": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            20,
+            500
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of customer trouble tickets specifically related to issues with discounts or promotions."
+    },
+    "Customer Trouble Tickets - Slow Net Speed": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            200,
+            2000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Number of customer trouble tickets specifically related to slow internet speeds."
+    },
+    "Number of Customer Interactions": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            5000,
+            200000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Overall total count of all customer interactions across various channels."
+    },
+    "Number Of Customers with Late Fee Waiver": {
+        "direction": "Low value is better",
+        "datatype": "int",
+        "range": [
+            100,
+            5000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Count of customers who received a waiver for late payment fees."
+    },
+    "Number Of Customers with Autopay Discount": {
+        "direction": "High value is better",
+        "datatype": "int",
+        "range": [
+            500,
+            20000
+        ],
+        "rollup": "sum",
+        "product_name": "Wireless",
+        "description": "Count of customers who are enrolled in autopay and receive a discount."
+    }
+}

@@ -1,0 +1,166 @@
+@prefix ex: <http://example.org/metrics-ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ARPUAverageRevenuePerUser a rdfs:Class ;
+    rdfs:label "ARPU (Average Revenue Per User)" ;
+    ex:hasDatatype "float" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange "80.0"^^xsd:float ;
+    ex:hasMinRange "30.0"^^xsd:float ;
+    rdfs:subClassOf ex:Metric .
+
+ex:CSATScore a rdfs:Class ;
+    rdfs:label "CSAT Score" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 95 ;
+    ex:hasMinRange 70 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:CustomerTroubleTicketsCount a rdfs:Class ;
+    rdfs:label "Customer Trouble Tickets Count" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange 500 ;
+    ex:hasMinRange 50 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:MarketSharePercentage a rdfs:Class ;
+    rdfs:label "Market Share Percentage" ;
+    ex:hasDatatype "float" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange "0.5"^^xsd:float ;
+    ex:hasMinRange "0.1"^^xsd:float ;
+    rdfs:subClassOf ex:Metric .
+
+ex:Metric a rdfs:Class ;
+    rdfs:label "Metric" .
+
+ex:NPSScore a rdfs:Class ;
+    rdfs:label "NPS Score" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 70 ;
+    ex:hasMinRange 30 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:QESScore a rdfs:Class ;
+    rdfs:label "QES Score" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 90 ;
+    ex:hasMinRange 60 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:SalesRelatedCallVolume a rdfs:Class ;
+    rdfs:label "Sales Related Call Volume" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 5000 ;
+    ex:hasMinRange 500 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:ServiceRelatedCallVolume a rdfs:Class ;
+    rdfs:label "Service Related Call Volume" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange 10000 ;
+    ex:hasMinRange 1000 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelessChurnRate a rdfs:Class ;
+    rdfs:label "Wireless Churn Rate" ;
+    ex:hasDatatype "float" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange "0.03"^^xsd:float ;
+    ex:hasMinRange "0.005"^^xsd:float ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelessDisconnects a rdfs:Class ;
+    rdfs:label "Wireless Disconnects" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange 5000 ;
+    ex:hasMinRange 500 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelessGrossAdds a rdfs:Class ;
+    rdfs:label "Wireless Gross Adds" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 20000 ;
+    ex:hasMinRange 5000 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelessNetAdds a rdfs:Class ;
+    rdfs:label "Wireless Net Adds" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 10000 ;
+    ex:hasMinRange 2000 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelineChurnRate a rdfs:Class ;
+    rdfs:label "Wireline Churn Rate" ;
+    ex:hasDatatype "float" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange "0.05"^^xsd:float ;
+    ex:hasMinRange "0.01"^^xsd:float ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelineDisconnects a rdfs:Class ;
+    rdfs:label "Wireline Disconnects" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "Low value is better" ;
+    ex:hasMaxRange 1000 ;
+    ex:hasMinRange 100 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelineGrossAdds a rdfs:Class ;
+    rdfs:label "Wireline Gross Adds" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 10000 ;
+    ex:hasMinRange 1000 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:WirelineNetAdds a rdfs:Class ;
+    rdfs:label "Wireline Net Adds" ;
+    ex:hasDatatype "int" ;
+    ex:hasDirection "High value is better" ;
+    ex:hasMaxRange 5000 ;
+    ex:hasMinRange 500 ;
+    rdfs:subClassOf ex:Metric .
+
+ex:hasDatatype a rdf:Property ;
+    rdfs:label "has data type" .
+
+ex:hasDirection a rdf:Property ;
+    rdfs:label "has direction" .
+
+ex:hasMaxRange a rdf:Property ;
+    rdfs:label "has maximum range value" .
+
+ex:hasMetricValue a rdf:Property ;
+    rdfs:label "has metric value" .
+
+ex:hasMinRange a rdf:Property ;
+    rdfs:label "has minimum range value" .
+
+ex:hasRelationshipExplanation a rdf:Property ;
+    rdfs:label "has relationship explanation" .
+
+ex:hasReportMonth a rdf:Property ;
+    rdfs:label "has report month" .
+
+ex:negativelyImpacts a rdf:Property ;
+    rdfs:label "negatively impacts" .
+
+ex:positivelyImpacts a rdf:Property ;
+    rdfs:label "positively impacts" .
+
+ex:supportiveOf a rdf:Property ;
+    rdfs:label "supportive of" .
+

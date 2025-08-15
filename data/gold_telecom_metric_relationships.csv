@@ -1,0 +1,20 @@
+metric_a,relationship_type,metric_b,reasoning
+arpa,negatively impacts,wireless churn rate,"higher arpa often reflects customer satisfaction and loyalty, thus reducing churn rate."
+average call handling time - service,directly proportional to,wireless churn rate,"if average call handlgling for service related call increases , customer dissatifcation increases and churn rate increases."
+average call handling time - service,negatively impacts,nps score,"longer call handling times may lead to lower customer satisfaction, thus decreasing nps score."
+average call handling time - service,positively impacts,wireless port out,poor service leading to longer call handling times might increase customer churn and port-outs.
+nps score,inversely proportional to,wireless churn rate,"high nps reflects satisfaction, leading to lower churn. lower nps score indicates dissatisfaction, leading to higher churn."
+nps score,positively impacts,wireless net adds,"higher nps scores indicate satisfied customers who are more likely to recommend the service, leading to potential growth in net adds."
+number of customers with autopay discount,decreases the value of,wireless churn rate,"customers enrolled in autopay with a discount are less likely to cancel or not renew their subscriptions, reducing the churn rate."
+number of customers with autopay discount,decreases the value of,wireless port out,"autopay users are more loyal, less likely to port out."
+Wireless Net Adds AAL,positively impacts,arpa,"when existing customers add more lines (aal), the average revenue per account (arpa) increases as more services are being used."
+Wireless Net Adds AAL,positively impacts,wireless net adds,more lines added by existing customers increase the total net adds.
+Wireless Net Adds AAL,related metric,wireless net adds,both metrics are related to the net increase in wireless customers.
+Wireless Net Adds New customers,related metric,Wireless Net Adds AAL,both are components of overall wireless net adds.
+Wireless Net Adds New customers,related metric,wireless net adds,both metrics are related to the net increase in wireless customers.
+wireless net adds,decreases the value of,wireless churn rate,"more net adds often reflect improved retention, reducing churn rate."
+wireless net adds,positively impacts,arpa,"net adds increase the user base, thus potentially increasing average revenue per account arpa."
+wireless port in,increases the value of,wireless net adds,port-ins directly contribute to net adds.
+wireless port out,decreases the value of,wireless net adds,port-outs reduce net adds.
+wireless port out,increases the value of,wireless churn rate,"when more customers transfer their phone number to another carrier (port out), the churn rate increases as more subscribers are leaving."
+wireless port out,related metric,wireless churn rate,both metrics are related to customer retention and churn.

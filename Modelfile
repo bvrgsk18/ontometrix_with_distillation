@@ -1,0 +1,8 @@
+FROM ./Gemma3_Finetuned_Merged-3.9B-q4_K_M.gguf
+TEMPLATE """
+<bos>
+{{- if .Prompt }}<start_of_turn>user
+{{ .Prompt }}<end_of_turn>
+<start_of_turn>model
+{{ end }}
+"""

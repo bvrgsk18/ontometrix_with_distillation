@@ -1,0 +1,20 @@
+HUGGINGFACE_API_TOKEN = ""
+OPENAI_API_TOKEN = ""
+
+STUDENT_MODEL="student_model"
+RELATIONSHIPS_LLM_MODEL = "gemini-2.5-flash-lite"
+RAG_LLM_MODEL = "gemini-2.5-flash-lite"
+RAGAS_LLM_MODEL= "gemini-2.5-flash-lite"
+
+
+GEMINI_API_TOKEN=""
+
+NEO4J_URI=""
+NEO4J_USERNAME=""
+NEO4J_PASSWORD=""
+AURA_INSTANCEID=""
+AURA_INSTANCENAME=""
+
+OLLAMA_BASE_URL = ""
+OLLAMA_STUDENT_MODEL = "student_model"
+
