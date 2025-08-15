@@ -124,9 +124,12 @@ ollama create student_model -f Modelfile
 ```
 
 ## Author
+
 **B V R G S Kumar**  
 M.Tech (AIML), BITS Pilani  
+
 **Project Guide**: Arun Kumar Shanmugam
+
 **Project Evaluator**: Mithun Kumar S R
 
 
