@@ -38,15 +38,15 @@ ontometrix_with_distillation/
 │   ├── distillation_data.jsonl
 │   └── metrics_dataset_gemma3.jsonl
 │
-
-
-
-- **app.py**: Main application script.
-- **config/**: Configuration files for metrics, products, regions, relationships, and unique columns.
-- **data/**: Contains datasets, generated data, and evaluation results.
-- **logs/**: Stores logs from distillation and metric dataset experiments.
-- **output/**: Contains output files such as the generated ontology.
 ```
+
+
+#### **app.py**: Main application script.
+#### **config/**: Configuration files for metrics, products, regions, relationships, and unique columns.
+#### **data/**: Contains datasets, generated data, and evaluation results.
+#### **logs/**: Stores logs from distillation and metric dataset experiments.
+#### **output/**: Contains output files such as the generated ontology.
+
 
 
 ### How to Run
@@ -127,9 +127,9 @@ ollama create student_model -f Modelfile
 **B V R G S Kumar**  
 M.Tech (AIML), BITS Pilani  
 
-**Project Guide**: Arun Kumar Shanmugam
+**Project Guide**:  Arun Kumar Shanmugam
 
-**Project Evaluator**: Mithun Kumar S R
+**Project Evaluator**:  Mithun Kumar S R
 
 
 
