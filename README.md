@@ -39,7 +39,7 @@ ontometrix_with_distillation/
 │   └── metrics_dataset_gemma3.jsonl
 │
 
-```
+
 
 - **app.py**: Main application script.
 - **config/**: Configuration files for metrics, products, regions, relationships, and unique columns.
@@ -49,8 +49,7 @@ ontometrix_with_distillation/
 ```
 
 
-## How to Run
-
+### How to Run
 ### **Set up environment**
 ```bash
 conda create --name ontometrix python=3.12 -y
@@ -70,7 +69,7 @@ Update config.py with Huggingface token, Gemini API Token, Neo4J instance creden
 ```bash
 streamlit run app.py
 
-#### Oprn the localhost url to see the chatbot interface
+Open the localhost url to see the chatbot interface
 
 ```
 
